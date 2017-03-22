@@ -1,0 +1,89 @@
+﻿<Page x:Class="LoveItBakeryG11.Pages.stock_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveItBakeryG11.Pages"
+      mc:Ignorable="d"
+      Title="stock_Page">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lblTab4" Content="Stock List Goes Here" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="123" Width="1476" FontSize="72"/>
+        <ListBox x:Name="txtStockOrder" Margin="0,0,0,0" Background="#FFA8A8A8" FontSize="24" Grid.Column="2" />
+        <Button x:Name="btnStockOrder" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Margin="5,5,5,5" Background="#FF24FB0F" Cursor="Hand">
+            <Viewbox Margin="5,5,5,5">
+                <TextBlock Text="Order Ingredients"/>
+            </Viewbox>
+        </Button>
+        <DataGrid x:Name="dtgridStock" Margin="0,0,0,0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtxStockSearch" Margin="0,0,0,0" Grid.Row="3" Text="Search..." FontSize="48" />
+        <Button x:Name="btnStockSearch" Margin="5,5,5,5" Grid.Row="3" Grid.Column="1">
+            <Viewbox Margin="5,5,5,5">
+                <TextBlock Text="Search"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="btnStockEdit" Grid.Row="1" Grid.Column="2" Margin="5,5,5,5" Cursor="Hand" Click="btnStockEdit_Click">
+            <Viewbox Margin="5,5,5,5">
+                <TextBlock Text="    Add Stock    "/>
+            </Viewbox>
+        </Button>
+        <Grid x:Name="addStockGrid" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.RowSpan="3"  Visibility="Collapsed" Panel.ZIndex="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Add Product" FontSize="30" Margin="10,10,10,10"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <TextBlock Text="Item Name" FontSize="25" Width="250"/>
+                    <TextBox x:Name="nameBox" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                    <TextBlock Text="Item Description" FontSize="25" Width="250"/>
+                    <TextBox x:Name="descBox" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="3">
+                    <TextBlock Text="Price" FontSize="25" Width="250"/>
+                    <TextBox x:Name="priceBox" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="4">
+                    <TextBlock Text="Current QTY in stock" FontSize="25" Width="250"/>
+                    <TextBox x:Name="qtyBox" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="5">
+                    <TextBlock Text="Stock Alert Level" FontSize="25" Width="250"/>
+                    <TextBox x:Name="alertBox" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="6">
+                    <Button x:Name="addButton" Margin="5,5,5,5" Click="addButton_Click">
+                        <Viewbox Margin="5,5,5,5">
+                            <TextBlock Text="Add Product"/>
+                        </Viewbox>
+                    </Button>
+                    <Button x:Name="exitbutton" Margin="5,5,5,5" Click="exitbutton_Click">
+                        <Viewbox Margin="5,5,5,5">
+                            <TextBlock Text="Cancel"/>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

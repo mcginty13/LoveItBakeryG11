@@ -1,0 +1,85 @@
+﻿<Page x:Class="LoveItBakeryG11.Pages.customers_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveItBakeryG11.Pages"
+      mc:Ignorable="d"
+      Title="customers_Page">
+
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid  x:Name="grdCustomerAdd" Background="#FFE5E5E5" Grid.ColumnSpan="2" Grid.Column="0"  Visibility="Collapsed" Panel.ZIndex="10">
+            <StackPanel  Orientation="Vertical">
+                <TextBlock Text="Add Customer" FontSize="30" Margin="10,10,10,10"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name" FontSize="25" Width="250"/>
+                    <TextBox x:Name="adName" FontSize="25" Width="250"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Address Line 1" FontSize="25" Width="250"/>
+                    <TextBox x:Name="ad1" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Address Line 2" FontSize="25" Width="250"/>
+                    <TextBox x:Name="ad2" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Address Line 3" FontSize="25" Width="250"/>
+                    <TextBox x:Name="ad3" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="City" FontSize="25" Width="250"/>
+                    <TextBox x:Name="adcity" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="County" FontSize="25" Width="250"/>
+                    <TextBox x:Name="adcounty" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Post Code" FontSize="25" Width="250"/>
+                    <TextBox x:Name="adpcode" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Contact Number" FontSize="25" Width="250"/>
+                    <TextBox x:Name="adcontno" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Email Address" FontSize="25" Width="250"/>
+                    <TextBox x:Name="ademail" Width="250" HorizontalAlignment="Left" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnAddCustomer" Content="Add Customer" Width="90" Height="25" HorizontalAlignment="Left" Margin="20,20,20,20" Click="btnAddCustomer_Click"/>
+                    <Button x:Name="btnCancelAddCustomer" Content="Cancel" Width="90" Height="25" HorizontalAlignment="Left" Margin="20,20,20,20" Click="btnCancelAddCustomer_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnCustomerAdd" Grid.Row="1" Grid.Column="1" Click="btnCustomerAdd_Click">
+                <Viewbox Margin="5,5,5,5">
+                    <TextBlock Text="Add Customer"/>
+                </Viewbox>
+            </Button>
+            <Button x:Name="btnCustEdit" Grid.Row="2" Grid.Column="1" Margin="0,0,0,0" Cursor="Hand">
+                <Viewbox Margin="5,5,5,5">
+                    <TextBlock Text="Edit Customer"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+        <Label x:Name="lblTab2" Content="Stored Customer Details Go Here&#xD;&#xA;" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="72" Height="754" Width="1059" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dtgridCust" Margin="0,0,0,0" />
+        <TextBox x:Name="txtxCustSearch" Margin="0,0,0,0" Grid.Column="0" FontSize="48" VerticalAlignment="Bottom" Text="Search..." />
+    </Grid>
+</Page>

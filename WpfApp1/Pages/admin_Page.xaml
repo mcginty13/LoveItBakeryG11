@@ -1,0 +1,16 @@
+﻿<Page x:Class="LoveItBakeryG11.Pages.admin_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoveItBakeryG11.Pages"
+      mc:Ignorable="d"
+      Title="admin_Page">
+
+    <Grid Background="#FFE5E5E5">
+        <Label x:Name="lblTab6" Content="Early Draft Of Admin Page" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="108" Width="849" FontSize="72"/>
+        <Button x:Name="btnAdminUser" Margin="10,113,1263,553" Content="User Settings" Cursor="Hand" FontSize="48" />
+        <Button x:Name="btnAdminServer" Margin="640,410,633,256" Content="Server Settings" Cursor="Hand" FontSize="48" />
+        <Button x:Name="btnAdminSave" Margin="1263,113,10,553" Content="Save/Load Data" Cursor="Hand" FontSize="48" />
+    </Grid>
+</Page>

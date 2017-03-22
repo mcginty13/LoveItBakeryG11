@@ -1,0 +1,73 @@
+﻿<Window x:Class="LoveItBakeryG11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoveItBakeryG11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
+
+    <Grid x:Name="grdRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="loginGrid" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblLoginTitle" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">
+                <Viewbox Margin="5,5,5,5">
+                    <TextBlock Text="LoveIt Bakery"/>
+                </Viewbox>
+            </Label>
+            <Button x:Name="btnCloseApp" Margin="5,5,5,5" Grid.Row="2" Click="btnCloseApp_Click_1" Grid.Column="2">
+                <Viewbox Margin="5,5,5,5">
+                    <TextBlock Text="Close"/>
+                </Viewbox>
+            </Button>
+            <UniformGrid x:Name="grdUserLogon" Grid.Row="1" Grid.Column="1"  Rows="10" Columns="6" Background="#FF474747">
+                
+            </UniformGrid>
+        </Grid>
+        <Grid x:Name="tabsGrid" Visibility="Collapsed" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TabControl x:Name="tabControl" Margin="10" Grid.ColumnSpan="2">
+                <TabItem x:Name="till_TabItem" Header="Till" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\till_Page.xaml"/>
+                </TabItem>
+                <TabItem Header="Orders" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\orders_Page.xaml"/>
+                </TabItem>
+                <TabItem Header="Customers" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\customers_Page.xaml"/>
+                </TabItem>
+                <TabItem Header="Stock" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\stock_Page.xaml"/>
+                </TabItem>
+                <TabItem Header="Sales Data" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\salesData_Page.xaml"/>
+                </TabItem>
+                <TabItem Header="Admin" Width="100" Height="50" Cursor="Hand">
+                    <Frame Source="Pages\admin_Page.xaml"/>
+                </TabItem>
+            </TabControl>
+            <Button x:Name="btnLogout" Grid.Column="1" Margin="5,5,5,5" Grid.Row="1" VerticalAlignment="Bottom" Click="btnLogout_Click" HorizontalAlignment="Right">
+                <Viewbox Margin="5,5,5,5">
+                    <TextBlock Text="Logout"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>
